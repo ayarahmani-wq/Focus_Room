@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Connexion</a>
+    <a href="register.html">Inscription</a>
+</nav>
+
+<h1>Contact</h1>
+<div class="container2">
+    <input id="contactEmail" placeholder="Votre email" onchange="verif_mail(this.value)"><br><br>
+     <div id="alert_email" style="color:red; font-size:12px;"></div>
+    <textarea id="contactMessage" placeholder="Votre message"></textarea><br><br>
+    <button onclick="saveContact()">Envoyer</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

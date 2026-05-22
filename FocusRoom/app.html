@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>FocusRoom App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="app" onload="initApp()">
+
+<nav>
+    <a href="app.html">FocusRoom</a>
+    <a href="#" onclick="logout()">Déconnexion</a>
+</nav>
+
+<header>
+    <h1>🎓 FocusRoom</h1>
+    <button id="themeBtn" onclick="toggleTheme()">🌙 Mode sombre</button>
+</header>
+<div id="sideMenu">
+    <h3>Mes tâches</h3>
+    <ul id="sideTaskList"></ul>
+</div>
+<main>
+    <section class="card">
+        <h2>📝 Mes tâches</h2>
+        <div class="row">
+            <input type="text" id="taskInput" placeholder="Nouvelle tâche">
+            <button onclick="addTask()">Ajouter</button>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>⏱️ Pomodoro (25 min)</h2>
+        <p id="timer">25:00</p>
+        <p id="quote" style="margin-top:15px;font-style:italic;"></p>
+        <div class="row">
+            <button onclick="startTimer()">Démarrer</button>
+            <button onclick="pauseTimer()">Pause</button>
+            <button onclick="resetTimer()">Réinitialiser</button>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>📊 Temps travaillé aujourd'hui</h2>
+        <p id="workTime">0 min</p>
+    </section>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
